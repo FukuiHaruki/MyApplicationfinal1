@@ -49,9 +49,9 @@ public class MainActivity extends Activity implements SensorEventListener {
     public void onSensorChanged(SensorEvent event) {
         float accelX = event.values[0]; // X軸方向の加速度（左右の傾き）
 
-        if (accelX > 3.0f) {
+        if (accelX > 5.0f) {//?fでどれくらい傾けたら動くのかを決められる
             gameView.moveBlockLeft();  // 端末を左に傾けたら左へ移動
-        } else if (accelX < -3.0f) {
+        } else if (accelX < -5.0f) {
             gameView.moveBlockRight(); // 端末を右に傾けたら右へ移動
         }
     }
